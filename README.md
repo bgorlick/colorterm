@@ -2,10 +2,6 @@
 
 **The Fastest Feature-Rich C++ Terminal Color Cross-Platform Header Only Library for adding vibrant colors to terminal output.**
 
-**Version: v0.0.1 (Alpha)**
-![image](https://github.com/bgorlick/colorterm/assets/5460972/a34689a1-1c05-437d-8215-96864d6a5d7a)
-
-
 ## High Level Features
 
 - Cross platform support for Windows, Linux, and macOS
@@ -16,6 +12,17 @@
 - Global enable/disable color and theme settings to quickly toggle color output on and off
 - Easy API Logger class to add colored logs to you application with log Levels (such as [INFO], [DEBUG], [ERROR, etc])
 - Custom color and theme management  - create, set, insert, inspect, replace, erase, save, load, list, enable, disable, set_default, is_enabled, list_all_theme_maps
+
+**Version: v0.0.1 (Alpha)**
+![image](https://github.com/bgorlick/colorterm/assets/5460972/a34689a1-1c05-437d-8215-96864d6a5d7a)
+
+## Custom Colors and ColorMaps (much more than shown here is possible)
+![image](https://github.com/bgorlick/colorterm/assets/5460972/490fd8b0-2450-4b15-8648-938a278676ab)
+
+## Dynamically Format into various Output Formats (XML, JSON, HTML, YAML, CSV, TXT)
+![image](https://github.com/bgorlick/colorterm/assets/5460972/d9d63cae-aa1b-44af-bb14-723d501d1914)
+
+## More Features (the list goes on and on :)
 - Create colormaps that can be single chars or complex strings
 - Create custom styles and apply them
 - Built in Config class that saves your configs in memory
