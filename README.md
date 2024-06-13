@@ -244,5 +244,8 @@ int main() {
 Distributed under the Boost Software License, Version 1.0.  
 (LICENSE_1_0.txt or copy at https://www.boost.org/LICENSE_1_0.txt)
 
+## Developer Notes
+This project was inspired by many color libraries including Pygments (python) and termcolor (c++). The aim is to provide a high level of performance, powerful features and ease of use.
+
 ## Contributions
-Contributors are welcome - this library is designed to make managing and expressing with colors in c++ easier and more streamlined!
+Contributors are welcome - this library is designed to make managing and expressing with colors in c++ easier, streamlined and enjoyable.
