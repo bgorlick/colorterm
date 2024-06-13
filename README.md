@@ -241,7 +241,7 @@ int main() {
 ```
 
 ## License and Copyright
-Copyright 2024-2025 Ben Gorlick | github.com/bgorlick/colorterm/ | License Boost 1.0
+Copyright 2024-2025 Ben Gorlick | github.com/bgorlick/colorterm/ 
 Distributed under the Boost Software License, Version 1.0.  
 (LICENSE_1_0.txt or copy at https://www.boost.org/LICENSE_1_0.txt)
 
