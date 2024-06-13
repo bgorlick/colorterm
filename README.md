@@ -3,11 +3,8 @@
 **The Fastest Feature-Rich C++ Terminal Color Cross-Platform Header Only Library for adding vibrant colors to terminal output.**
 
 **Version: v0.0.1 (Alpha)**
+![image](https://github.com/bgorlick/colorterm/assets/5460972/a34689a1-1c05-437d-8215-96864d6a5d7a)
 
-## License
-
-Distributed under the Boost Software License, Version 1.0.  
-(LICENSE_1_0.txt or copy at https://www.boost.org/LICENSE_1_0.txt)
 
 ## High Level Features
 
@@ -32,7 +29,8 @@ Distributed under the Boost Software License, Version 1.0.
 For immediate use:
 
 ```cpp
-#include "colorterm.hpp"```
+#include "colorterm.hpp"
+```
 
 ## 
 As this is a header only library, you can simply include the header file in your project and start using the library immediately.
@@ -42,21 +40,26 @@ As this is a header only library, you can simply include the header file in your
 Download the file called benchmark.cpp included in the main repository. 
 
 Compile with clang++ (or g++) run the following command:
+```bash
 clang++ -std=c++17 -O3 -rtlib=compiler-rt -stdlib=libc++ -o benchmark benchmark.cpp \
       -I/usr/local/include/c++/v1 \
       -L/usr/local/lib \
-      -lc++ -lc++abi -lunwind -lgcc_s -lgcc -lm -lc -v -ferror-limit=50
-
+      -lc++ -lc++abi -lunwind -lgcc_s -lgcc -lm -lc -v -ferror-limit=50`
+```
 
 Compile with g++:
-g++ -std=c++17 -O3 -o benchmark benchmark.cpp \
+```g++ -std=c++17 -O3 -o benchmark benchmark.cpp \
     -I/usr/local/include/c++/v1 \
     -L/usr/local/lib \
-    -lstdc++ -lunwind -lgcc_s -lgcc -lm -lc -v -fmax-errors=50
+    -lstdc++ -lunwind -lgcc_s -lgcc -lm -lc -v -fmax-errors=50`
+```
 
+Then run the compiled binary to see some of the color features: 
+`./benchmark --verify-all`
 
-Then run the compiled binary to see some of the color features: ./benchmark --verify-all 
-
+## Example
+```cpp
+#include "colorterm.hpp"
 int main() {
     std::cout << colorterm::red << "Red text" << colorterm::reset << std::endl;
     Logger::info("This is an info message"); // Apply predefined colors
@@ -74,7 +77,7 @@ int main() {
     colorterm::apply_gradient(std::cout, "This is a sentence that will be rendered with a gradient color text", 255, 0, 0, 0, 0, 255) << colorterm::reset << std::endl; // Apply gradient color
     return 0;
 }
-\`\`\
+```
 
 ## Key Features
 
@@ -93,6 +96,7 @@ int main() {
 
 ### ThemeManager
 
+```cpp
 1. `void create(const std::string& themeName)`  
    Usage: `colorterm::create_theme("my_theme");`
 
@@ -188,10 +192,13 @@ int main() {
 
 10. `void erase(const std::string& characters)`  
     Usage: `colorterm::erase_colormap("[]");`
+```
 
-## Usage
+## More Usage Examples
 
-Include the `colorterm.hpp` header in your C++ project and link against any necessary libraries. Use the predefined functions or define your own custom colors and styles to enhance the terminal output.
+Include the `colorterm.hpp` header in your C++ project and link against any necessary libraries. 
+
+Use the predefined functions or define your own custom colors and styles to enhance the terminal output.
 
 A sample of functionality below does the following: 
 - Applies predefined colors and styles.
@@ -205,7 +212,7 @@ A sample of functionality below does the following:
 - Outputs text with a predefined style.
 - Shows gold background with black text and uses the full reset after applying a style.
 
-\`\`\cpp
+```cpp
 #include "colorterm.hpp"
 
 int main() {
@@ -221,7 +228,14 @@ int main() {
     std::cout << colorterm::red << "Red text" << colorterm::reset << std::endl; // Output text with a predefined foreground color
     std::cout << colorterm::bg_gold << "Gold background" << colorterm::reset << std::endl; // Output text with a predefined background color
     std::cout << colorterm::bold << "Bold text" << colorterm::reset << std::endl; // Output text with a predefined style
-    std::cout << colorterm::bg_gold << colorterm::black << colorterm::bold << "Gold background with black text" << colorterm::fullreset << std::endl; // Gold background with black text and using the full reset after applying a style.
+    std::cout << colorterm::bg_gold << colorterm::black << colorterm::bold << "Gold background with black text" << colorterm::fullreset << std::endl; // Gold background with black text and using the fullreset after applying a style.
     return 0;
 }
-\`\`\
+```
+## License
+
+Distributed under the Boost Software License, Version 1.0.  
+(LICENSE_1_0.txt or copy at https://www.boost.org/LICENSE_1_0.txt)
+
+## Contributions
+Contributors are welcome - this library is designed to make managing and expressing with colors in c++ easier and more streamlined!
